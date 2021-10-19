@@ -7,13 +7,13 @@ slug: /whatisurl
 
 ## 새로운 제목
 
-제목을 적습니다. [여기를](./intro.md) 누르면 첫번째 항목으로!
+제목을 적습니다. [여기를](./hi.md) 누르면 첫번째 항목으로!
 
 ## 링크 추가하기
 
-relative file path 와 url path 둘다 가능합니다.  
-[여기를](/create-a-page) 누르면 create-a-page로  
-[여기를](./intro.md) 누르면 intro.md 로
+relative file path 와 url path 둘다 가능합니다.
+
+[여기를](./hi.md) 누르면 hi.md 로
 
 ## 이미지 추가하기
 
