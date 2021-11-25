@@ -28,11 +28,6 @@ const config = {
           // Please change this to your repo.
           editUrl: "https://github.com/danwsc09",
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          editUrl: "https://github.com/danwsc09/danwsc09.github.io",
-        },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
