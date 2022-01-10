@@ -5,7 +5,7 @@ title: TS Docs 1
 Last updated: 2021/11/25 Thurs
 
 ## Introduction
-TypeScript 공식문서를 보면서 몰랐던거나 특이했던것들만 적어보려고 한다. Handbook 을 읽으면서 본 내용들에 관한것들이다.
+TypeScript 공식문서를 보면서 몰랐던거나 특이했던 것들만 적어보려고 한다. Handbook 을 읽으면서 본 내용들에 관한것들이다. 특히, [More on Functions](https://www.typescriptlang.org/docs/handbook/2/functions.html) 와 [Object Types](https://www.typescriptlang.org/docs/handbook/2/objects.html) 에 나와있는 내용들이다.
 
 ## Call Signatures
 Function Type Expression 은 함수가 어떻게 생겼는지 설명해준다.
@@ -14,11 +14,11 @@ type GreeterFunction = (a: string) => void;
 ```
 Call Signature 도 비슷한걸 해준다.
 ```ts
-type DescFunction {
-  (someArg: number): boolean
+type DescFunction = {
+  (a: string): void
 }
 ```
-여기까지 둘은 똑같다 (함수가 생긴건 다르지만). 하지만 다른점이 있다면, 그건 바로 함수에 property 를 추가할 수 있다는 점이다.
+여기까지 둘은 똑같다. 하지만 다른점이 있다면, 그건 바로 함수에 property 를 추가할 수 있다는 점이다.
 ```ts
 type DescFunction {
   (someArg: number): boolean,
@@ -88,3 +88,18 @@ Redux 의 `createStore` 함수도 overload 를 쓰는걸 볼 수 있다 ([링크
 - 2개일때: `reducer`, `enhancer`
 - 3개일때: `reducer`, `preloadedState`, `enhancer`
 순으로 정의되있는걸 확인할 수 있다.
+
+## Return type void
+`void` 가 함수의 리턴타입일때 함수 내부에서 리턴값이 꼭 없을 필요가 없다. 다만, 숫자나 문자열같이 무언가를 리턴한다면, 그 값은 무시된다.
+```ts
+type voidFunc = () => void;
+const f1: voidFunc = () => true;
+
+const v1 = f1(); // v1 의 type 은 void
+```
+단, `void` 가 함수 definition 에 바로 붙어있으면, 리턴값이 존재해선 안된다.
+```ts
+function f2(): void {
+  return true; // error
+}
+```
