@@ -69,3 +69,6 @@ let t = s.clone();
 let u = s.clone();
 ```
 
+### Copy Types
+`Copy` types are types where the `moves` don't leave the initial variable uninitialized. These include machine integer and float types, `char`s, `bool`s, and a tuple or fixed-size array of `Copy` types. `Copy` types don't have any values on the heap.  
+`struct` and `enum` types aren't `Copy` types.
