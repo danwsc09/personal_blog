@@ -19,3 +19,7 @@ Syntax: `&mut e`
 - mutable references are not `Copy`
 - 'single writer'
 
+## Static
+- Every static must be initialized.
+- Mutable statics are not thread-safe, since any thread can access the data segment.
+  - Mutable statics can only be accessed in an `unsafe` block.
