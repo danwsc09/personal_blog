@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-title: SSR in Vue - Experiment with Hooks
+title: SSR in Vue & Migration from SPA to SSR in Nuxt
 ---
 
 Last updated: 2022/05/02

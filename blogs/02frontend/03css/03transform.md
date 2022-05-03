@@ -2,7 +2,7 @@
 sidebar_position: 3
 title: CSS Transform
 ---
-
+Last updated: 2022/03/01 Tue
 # Introduction
 에니메이션 효과를 주기 위한 제일 좋은방법은 보통 `transform` 속성을 이용하는 것이다. 이 글은 `transform` 을 더 알아보려고 하는 글이다.
 
